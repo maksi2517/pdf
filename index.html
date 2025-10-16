@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netzwerktechnik – Übungsquiz</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="app">
+    <header class="app__header">
+        <h1>Netzwerktechnik – Übungsquiz</h1>
+        <p>Fragen & Antworten zum Üben. Reihenfolge der Fragen und Antworten wird bei jedem Durchlauf zufällig gemischt.</p>
+    </header>
+
+    <section class="app__controls">
+        <button id="restartBtn" class="btn btn--secondary" title="Fragen neu mischen und von vorn beginnen">🔀 Neu mischen & starten</button>
+        <div class="progress" id="progress">Frage –/–</div>
+    </section>
+
+    <section id="quizCard" class="card hidden" aria-live="polite"></section>
+
+    <section id="resultCard" class="card hidden" aria-live="polite"></section>
+
+    <footer class="app__footer">
+        <small>Hinweis: Bei Fragen mit mehreren richtigen Antworten sind Mehrfachauswahlen möglich.</small>
+    </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
