@@ -103,9 +103,9 @@
       return;
     }
 
-    var monthly = (amount / months) * 1.035;
+    var monthly = (amount / months) * 1.069;
     if (rateDisplay) rateDisplay.textContent = (monthly).toLocaleString('de-AT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    if (rateHint)    rateHint.textContent = 'Eff. Jahreszins ca. 3,5 % p.a. – bonitätsabhängig';
+    if (rateHint)    rateHint.textContent = 'Eff. Jahreszins ca. 6,9 % p.a. – bonitätsabhängig';
 
     document.querySelectorAll('.form-display.muted').forEach(function (el) {
       el.classList.remove('muted');
