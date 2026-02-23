@@ -867,7 +867,7 @@ p  { line-height: 1.6; }
   .section-pad { padding: 3rem 0; }
   .hero { padding-top: 80px; }
   .hero-content { padding: 1.5rem 0 2rem; }
-  .loan-form-wrap { margin-top: 0.5rem; }
+  .loan-form-wrap { margin-top: -1rem; }
   .hero-text { gap: 1.25rem; }
   .loan-form-grid { grid-template-columns: 1fr; }
   .loan-form-footer { flex-direction: column-reverse; align-items: stretch; }
