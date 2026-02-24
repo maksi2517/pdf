@@ -62,6 +62,7 @@ p  { line-height: 1.6; }
   background: rgba(212,1,0,0.08);
   font-size: 11px; font-weight: 500; text-transform: uppercase;
   letter-spacing: 0.08em; color: rgba(255,255,255,0.7);
+  align-self: flex-start;
 }
 .section-badge .pulse-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -639,15 +640,15 @@ p  { line-height: 1.6; }
 .hiw-check { display: flex; align-items: center; gap: 8px; }
 .hiw-check svg { color: var(--brand); flex-shrink: 0; }
 .hiw-check span { font-size: 14px; color: rgba(255,255,255,0.5); }
-.steps-row { display: flex; flex-direction: row; align-items: stretch; gap: 0; }
-.step-wrap { display: flex; flex-direction: row; align-items: stretch; flex: 1; }
+.steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.step-wrap { display: flex; flex-direction: row; align-items: stretch; }
 .step-card {
   position: relative; display: flex; flex-direction: column; gap: 24px; padding: 24px;
   border-radius: var(--radius-lg); overflow: hidden;
   border: 1px solid rgba(255,255,255,0.08);
   background: linear-gradient(to bottom, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  flex: 1; cursor: default;
+  flex: 1; height: 100%; cursor: default;
 }
 .step-card:hover { border-color: rgba(212,1,0,0.3); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.16); }
 .step-card:hover .icon-box.lg { background: rgba(212,1,0,0.2); border-color: rgba(212,1,0,0.4); }
@@ -668,6 +669,7 @@ p  { line-height: 1.6; }
 .step-chip .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); opacity: 0.7; }
 .step-chip span { font-size: 12px; color: rgba(255,255,255,0.45); }
 .step-connector { display: flex; align-items: center; justify-content: center; width: 48px; flex-shrink: 0; margin-top: 32px; }
+.step-wrap:last-child { padding-right: 48px; }
 .step-connector-inner { display: flex; align-items: center; gap: 4px; width: 100%; }
 .connector-line { flex: 1; height: 0; border-top: 2px dashed rgba(212,1,0,0.4); }
 .connector-arrow { color: rgba(212,1,0,0.5); flex-shrink: 0; }
@@ -846,8 +848,9 @@ p  { line-height: 1.6; }
   .review-verified { grid-row: 2; grid-column: 2 / 4; width: fit-content; }
   .review-divider-v { display: none; }
   .hiw-header { flex-direction: column; align-items: flex-start; }
-  .steps-row { flex-direction: column; gap: 12px; }
+  .steps-row { grid-template-columns: 1fr; gap: 12px; }
   .step-connector { display: none; }
+  .step-wrap:last-child { padding-right: 0; }
   .faq-cols { grid-template-columns: 1fr; }
   .faq-cta-strip { flex-direction: column; }
   .why-us-header { flex-direction: column; align-items: flex-start; }
