@@ -62,7 +62,7 @@ p  { line-height: 1.6; }
   background: rgba(212,1,0,0.08);
   font-size: 11px; font-weight: 500; text-transform: uppercase;
   letter-spacing: 0.08em; color: rgba(255,255,255,0.7);
-  align-self: flex-start;
+  width: fit-content;
 }
 .section-badge .pulse-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -78,7 +78,7 @@ p  { line-height: 1.6; }
 /* ── Buttons ───────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 24px; border-radius: var(--radius-full);
+  padding: 12px 32px; border-radius: var(--radius-full);
   background: var(--brand); color: #fff;
   font-weight: 600; font-size: 15px;
   box-shadow: var(--shadow-brand);
@@ -87,7 +87,7 @@ p  { line-height: 1.6; }
 }
 .btn-primary:hover  { background: var(--brand-hover); }
 .btn-primary:active { transform: scale(0.97); }
-.btn-primary.lg { padding: 14px 32px; font-size: 16px; }
+.btn-primary.lg { padding: 14px 40px; font-size: 16px; }
 
 /* ── Icon Box ──────────────────────────────────────────────── */
 .icon-box {
