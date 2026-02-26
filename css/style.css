@@ -242,15 +242,16 @@ p  { line-height: 1.6; }
 }
 .hamburger:hover { color: var(--navy); background: var(--bg-3); }
 
-/* Mobile menu — stays dark (glass overlay) */
+/* Mobile menu — light theme */
 .mobile-menu-backdrop {
     display: none; position: fixed; inset: 0; z-index: 90;
-    background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
 }
 .mobile-menu {
     display: none; position: fixed; top: 72px; left: 16px; right: 16px; z-index: 95;
-    border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(10,15,30,0.97); backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg); border: 1px solid var(--border);
+    background: var(--bg-2);
+    box-shadow: var(--shadow-lg);
     overflow: hidden;
 }
 .mobile-menu.open, .mobile-menu-backdrop.open { display: block; }
@@ -259,25 +260,25 @@ p  { line-height: 1.6; }
     display: flex; align-items: center; gap: 12px;
     padding: 12px 16px; border-radius: var(--radius-lg);
     border: 1px solid transparent;
-    font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.7);
-    transition: background 0.2s, color 0.2s;
+    font-size: 16px; font-weight: 500; color: var(--text-secondary);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-.mobile-nav a:hover { background: rgba(255,255,255,0.05); color: #fff; }
+.mobile-nav a:hover { background: var(--navy-alpha-07); color: var(--navy); border-color: var(--border-navy); }
 .mobile-nav a.active {
-    background: rgba(212,1,0,0.08); border-color: rgba(212,1,0,0.2); color: var(--brand);
+    background: rgba(212,1,0,0.07); border-color: rgba(212,1,0,0.18); color: var(--brand);
 }
 .mobile-nav a.active .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0; }
-.mobile-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 0 16px; }
+.mobile-divider { height: 1px; background: linear-gradient(to right, transparent, rgba(212,1,0,0.22), transparent); margin: 0 16px; }
 .mobile-cta { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
 .btn-phone {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 12px 24px; border-radius: var(--radius-lg);
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.03);
-    color: rgba(255,255,255,0.6); font-size: 16px; font-weight: 500;
-    transition: color 0.2s;
+    border: 1px solid var(--border-navy);
+    background: var(--navy-alpha-07);
+    color: var(--text-secondary); font-size: 16px; font-weight: 500;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
-.btn-phone:hover { color: #fff; }
+.btn-phone:hover { color: var(--navy); background: var(--navy-alpha-12); border-color: var(--border-navy-hover); }
 
 /* ============================================================
    HERO SECTION  — light (white + subtle blue gradient)
@@ -295,13 +296,13 @@ p  { line-height: 1.6; }
 .hero-grid {
     position: absolute; inset: 0;
     background-image:
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 24px,
-            rgba(12,24,54,0.035) 24px,
-            rgba(12,24,54,0.035) 25px
-        );
+            repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 24px,
+                    rgba(12,24,54,0.035) 24px,
+                    rgba(12,24,54,0.035) 25px
+            );
 }
 /* hero-glow removed — not needed on light background */
 .hero-glow { display: none; }
